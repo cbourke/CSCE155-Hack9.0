@@ -3,7 +3,7 @@
 *.o
 
 # no executables:
-ticTacToe
+ticTacToe/ticTacToe
 
 # do not commit debugging stuff
 *.dSYM
