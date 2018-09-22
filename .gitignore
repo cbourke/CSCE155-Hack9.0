@@ -2,11 +2,11 @@
 # do not commit object files
 *.o
 
-# nor executables
-kaprekarDemo
-kaprekarTest
-kaprekarTestCmocka
+# no executables:
+ticTacToe
 
+# do not commit debugging stuff
+*.dSYM
 
 ## Standard windows crap
 
