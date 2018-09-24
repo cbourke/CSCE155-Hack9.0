@@ -10,7 +10,7 @@ int *randomArray(int n);
 
 /**
  * Computes the average of the elements in the
- * given array. 
+ * given array.
  */
 double average(const int *a, int n);
 
@@ -20,7 +20,7 @@ double average(const int *a, int n);
 void printArray(const int *a, int n);
 
 //default value
-#define N 10
+const int N = 10;
 
 int main(int argc, char **argv) {
 
@@ -36,7 +36,7 @@ int main(int argc, char **argv) {
   printf("Computing average of ");
   printArray(arr, n);
   double ave = average(arr, n);
-  printf("\nAverage = %f\n", ave);  
+  printf("\nAverage = %f\n", ave);
 
   return 0;
 }
@@ -44,7 +44,7 @@ int main(int argc, char **argv) {
 int *randomArray(int n) {
   int *a = malloc(n * sizeof(int));
   int i;
-  for(i=0; i<n; i++) { 
+  for(i=0; i<n; i++) {
     a[i] = random() % 10;
   }
   return;
