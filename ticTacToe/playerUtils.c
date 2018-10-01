@@ -64,7 +64,7 @@ void findBestMove(Move **board, int *row, int *col) {
           *col = j;
           return;
         }
-        int x = numWinningCombos(board, X); //should be numNonLosingCombos
+        int x = numWinningCombos(board, X);
         board[i][j] = NONE;  //undo move
         if(x > best) {
           *row = i;
