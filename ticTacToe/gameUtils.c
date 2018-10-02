@@ -24,9 +24,9 @@ Move ** copyBoard(Move **board) {
 }
 
 Move ** newBoard() {
-  int **board = (int **) malloc(3 * sizeof(int*));
+  Move **board = (Move **) malloc(3 * sizeof(Move*));
   for(int i=0; i<3; i++) {
-    board[i] = (int *) malloc(3 * sizeof(int));
+    board[i] = (Move *) malloc(3 * sizeof(Move));
     for(int j=0; j<3; j++) {
       board[i][j] = NONE;
     }
