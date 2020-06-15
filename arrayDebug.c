@@ -1,6 +1,10 @@
-#include<stdlib.h>
-#include<stdio.h>
-#include<time.h>
+/**
+ * A simple buggy program to demonstrate the 
+ * usage of GDB.
+ */
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
 
 /**
  * Creates a random array of size n filled with

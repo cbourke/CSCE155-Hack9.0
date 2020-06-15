@@ -1,6 +1,10 @@
-#include<stdlib.h>
-#include<stdio.h>
-#include<time.h>
+/**
+ * The main game loop program for the 
+ * tic-tac-toe game.
+ */
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
 
 #include "gameUtils.h"
 #include "playerUtils.h"
