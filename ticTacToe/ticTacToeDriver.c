@@ -42,7 +42,8 @@ int main(int argc, char **argv) {
 
   printf("Final Board:\n");
   printBoard(board);
-
+  freeBoard(board);
+  
   if(s == O_WINS) {
     printf("O Wins!\n");
   } else if(s == X_WINS) {
