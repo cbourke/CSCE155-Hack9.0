@@ -5,6 +5,9 @@
 # no executables:
 ticTacToe/ticTacToe
 
+# solution
+solution/
+
 # do not commit debugging stuff
 *.dSYM
 
