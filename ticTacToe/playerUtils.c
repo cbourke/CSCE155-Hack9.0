@@ -10,6 +10,7 @@ void userMove(Move **board, Move player) {
   while(input == 0) {
     printf("Please enter a choice (1-9): ");
     scanf("%d", &input);
+    flushInput();
     if(input < 1 || input > 9) {
       printf("Error: input is out of range, try again.\n");
     } else if(board[(input-1)/3][(input-1) % 3] != NONE) {
@@ -103,4 +104,10 @@ int numWinningCombos(Move **board, Move nextMove) {
     printf("Illegal state!\n");
     exit(1);
   }
+}
+
+void flushInput() {
+  int c;
+  while ((c = getchar()) != '\n' && c != EOF) { }
+  return;
 }

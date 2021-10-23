@@ -32,3 +32,9 @@ void smartComputerMove(Move **board);
  * next given the current board.
  */
 void findBestMove(Move **board, int *row, int *col);
+
+/**
+ * Flushes the standard input buffer in a portable manner,
+ * clearing all input/keyboard mashes by the user.
+ */
+void flushInput();
