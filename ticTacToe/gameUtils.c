@@ -64,15 +64,18 @@ void printBoard(Move **board) {
 GameMode mainMenu() {
 
   int choice = 0;
-  while(choice < 1 || choice > 3) {
-    printf("Welcome to Tic-Tac-Toe!!\n");
-    printf("========================\n");
-    printf("Menu\n");
-    printf("(1) 2-player game\n");
-    printf("(2) 1-player game vs random computer\n");
-    printf("(3) 1-player game vs smart computer\n");
-    scanf("%d", &choice);
+  printf("Welcome to Tic-Tac-Toe!!\n");
+  printf("========================\n");
+  printf("Menu\n");
+  printf("(1) 2-player game\n");
+  printf("(2) 1-player game vs random computer\n");
+  printf("(3) 1-player game vs smart computer\n");
+  scanf("%d", &choice);
+  if(choice < 1 || choice > 3) {
+    printf("Invalid choice, please play again.\n");
+    exit(1);
   }
+
   return choice;
 }
 
