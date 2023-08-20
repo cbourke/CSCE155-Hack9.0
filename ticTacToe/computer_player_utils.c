@@ -1,28 +1,13 @@
+/**
+ * Collection of AI player utility functions.
+ *
+ * There are no bugs in this file.
+ */
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "gameUtils.h"
-#include "playerUtils.h"
-
-void userMove(Move **board, Move player) {
-
-  int input = 0;
-  while(input == 0) {
-    printf("Please enter a choice (1-9): ");
-    scanf("%d", &input);
-    flushInput();
-    if(input < 1 || input > 9) {
-      printf("Error: input is out of range, try again.\n");
-    } else if(board[(input-1)/3][(input-1) % 3] != NONE) {
-      printf("Error: that choice was already made.\n");
-    } else {
-      //we map 1-9 to [0][0] thru [2][2]:
-      board[(input-1)/3][(input-1)] = player;
-      return;
-    }
-    input = 0;
-  }
-}
+#include "game_utils.h"
+#include "computer_player_utils.h"
 
 void randomComputerMove(Move **board) {
   int isValid = 0;
@@ -104,10 +89,4 @@ int numWinningCombos(Move **board, Move nextMove) {
     printf("Illegal state!\n");
     exit(1);
   }
-}
-
-void flushInput() {
-  int c;
-  while ((c = getchar()) != '\n' && c != EOF) { }
-  return;
 }

@@ -2,6 +2,7 @@ typedef enum {
   TWO_PLAYER        = 1,
   ONE_PLAYER_RANDOM = 2,
   ONE_PLAYER_SMART  = 3,
+  ZERO_PLAYER       = 4,
 } GameMode;
 
 typedef enum {
@@ -40,7 +41,8 @@ void printBoard(Move **board);
 
 /**
  * Prompts the user to choose a given game mode, returning
- * their choice.
+ * their choice.  If the player makes an invalid choice, it
+ * quits.
  */
 GameMode mainMenu();
 

@@ -1,13 +1,16 @@
 /**
- * The main game loop program for the 
+ * The main game loop program for the
  * tic-tac-toe game.
  */
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
 
-#include "gameUtils.h"
-#include "playerUtils.h"
+#include "game_utils.h"
+#include "player_utils.h"
+#include "computer_player_utils.h"
+
+//hint: there is 1 bug in this file
 
 int main(int argc, char **argv) {
 
@@ -43,7 +46,7 @@ int main(int argc, char **argv) {
   printf("Final Board:\n");
   printBoard(board);
   freeBoard(board);
-  
+
   if(s == O_WINS) {
     printf("O Wins!\n");
   } else if(s == X_WINS) {

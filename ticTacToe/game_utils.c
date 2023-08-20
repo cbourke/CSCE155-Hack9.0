@@ -1,7 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "gameUtils.h"
+#include "game_utils.h"
+#include "utils.h"
+
+//Hint: there are 3 bugs in this file
 
 void freeBoard(Move **board) {
 
@@ -52,7 +55,7 @@ void printBoard(Move **board) {
       }
     }
     printf("\n");
-    if(i<3) {
+    if(i<2) {
       printf("  ------+-------+------\n");
     }
   }
@@ -69,7 +72,7 @@ GameMode mainMenu() {
   printf("Menu\n");
   printf("(1) 2-player game\n");
   printf("(2) 1-player game vs random computer\n");
-  printf("(3) 1-player game vs smart computer\n");
+  printf("(3) 1-player game vs smart-ish computer\n");
   scanf("%d", &choice);
   if(choice < 1 || choice > 3) {
     printf("Invalid choice, please play again.\n");
@@ -113,8 +116,10 @@ Status getStatus(Move **board) {
 
     //if there are any unplayed squares, keep playing
     int i, j;
+    //check each of the 9 sqaures...
     for(i=0; i<3; i++) {
       for(j=0; j<3; j++) {
+        //if unplayed, set status to PLAYING
         if(board[i][j] == O || board[i][j] == X) {
           s = PLAYING;
         }
